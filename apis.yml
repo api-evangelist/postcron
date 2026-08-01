@@ -1,7 +1,27 @@
 aid: postcron
-name: postcron
-description: postcron is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/postcron.png
+name: Postcron
+description: >-
+  Postcron is a social media scheduling and publishing tool that lets marketers,
+  agencies, and small businesses plan, schedule, and automatically publish content
+  across Instagram, Facebook, X (Twitter), LinkedIn, Pinterest, and TikTok from a
+  single dashboard. It supports bulk uploading up to 1,000 posts from Excel or Google
+  Docs, multi-account and team management, automatic image watermarking, a browser
+  extension, and mobile apps for iOS and Android. Originally a Y Combinator / 500
+  Global-backed startup, Postcron is a consumer- and SMB-facing publishing product;
+  it exposes an internal application API used by its own clients but does not publish
+  a documented public developer API, OpenAPI specification, SDKs, or a developer portal.
 url: https://raw.githubusercontent.com/api-evangelist/postcron/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +31,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Social Media
+- Social Media Scheduling
+- Publishing
+- Marketing
+- Content Management
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +48,27 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://socialtools.me
+  url: https://postcron.com
+- type: Blog
+  url: https://postcron.com/en/blog
+- type: BlogRSS
+  url: https://postcron.com/en/blog/feed
+- type: Pricing
+  url: https://postcron.com/en/pricing
+- type: SignUp
+  url: https://postcron.com/register
+- type: HelpCenter
+  url: https://postcron.com/en/faqs
+- type: TermsOfService
+  url: https://postcron.com/en/terms_conditions_privacy_policy
+- type: PrivacyPolicy
+  url: https://postcron.com/en/terms_conditions_privacy_policy
+- type: GitHubOrganization
+  url: https://github.com/postcron
+- type: DomainSecurity
+  url: security/postcron-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
