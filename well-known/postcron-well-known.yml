@@ -1,0 +1,49 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of postcron.com and api.postcron.com
+note: >-
+  Every /.well-known/ path probed on both Postcron hosts returned 404. No discovery
+  document is served, so NO WellKnown / SecurityTxt pointer is wired into apis.yml —
+  this file records a verified absence, not a presence. On postcron.com the 404 is the
+  site's full HTML error page (~62KB); on api.postcron.com it is an nginx 404.
+hosts:
+- host: https://postcron.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.postcron.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+summary:
+  documents_found: 0
+  hosts_probed: 2
+  paths_probed: 16

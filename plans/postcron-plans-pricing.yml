@@ -1,0 +1,21 @@
+generated: '2026-08-13'
+method: searched
+source: https://postcron.com/en/pricing
+plan_count: 0
+currency: null
+plans: []
+note: >-
+  Postcron publishes a Pricing link in its site navigation, but https://postcron.com/en/pricing
+  302s into the Angular single-page application at https://postcron.com/app/en/plans/, whose
+  served HTML is a ~7.8KB shell containing no plan names, prices, quotas or limits — the tier
+  table is rendered client-side from a token-gated backend call (https://postcron.com/api/*
+  answers 401 "You need send a token" for every path, including /api/plans). No plan tier could
+  be read from a provider-published source without executing scripts and authenticating, so no
+  tiers are recorded here. This is an unreadable pricing surface, not an absence of pricing.
+x-evidence:
+- url: https://postcron.com/en/pricing
+  status: 200
+  note: 302 chain terminating at https://postcron.com/app/en/plans/ (SPA shell, 7815 bytes)
+- url: https://postcron.com/api/plans
+  status: 401
+  note: 'body: You need send a token'

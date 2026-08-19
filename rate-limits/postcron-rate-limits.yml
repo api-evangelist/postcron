@@ -1,0 +1,23 @@
+generated: '2026-08-13'
+method: searched
+source: https://postcron.com/en/faqs
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  Postcron publishes no developer documentation of any kind, so no rate limits, quota
+  windows, burst allowances, exhaustion status codes or RateLimit-* response headers are
+  documented anywhere on its public surface. The only Postcron API hosts that answer
+  (https://postcron.com/api/* and https://api.postcron.com/api/v1/*) are the private
+  backends of the Postcron web app and are token-gated, so no limit could be observed on
+  an unauthenticated response either. An honest zero: nothing published, nothing observable.
+x-evidence:
+- url: https://postcron.com/en/faqs
+  status: 200
+  note: Help Center 302s to the client-rendered app shell at /app/en/help-center; no API section
+- url: https://postcron.com/api/
+  status: 401
+  note: 'body: You need send a token — no RateLimit-* or Retry-After headers on the response'
+- url: https://api.postcron.com/api/v1/
+  status: 404
+  note: 'JSON envelope {"message","error","statusCode"}; no rate-limit headers returned'

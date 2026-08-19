@@ -1,0 +1,36 @@
+# Postcron
+
+> Postcron is a social media scheduling and publishing tool for marketers, agencies and small
+> businesses: plan, schedule and automatically publish content across Instagram, Facebook,
+> X (Twitter), LinkedIn and Pinterest from one dashboard, with bulk upload from Excel/Google
+> Docs, multi-account and team management, automatic image watermarking, a browser extension
+> and iOS/Android apps. Postcron is an end-user product — as of 2026-08-13 it publishes no
+> public developer API, no OpenAPI specification, no SDKs and no developer portal.
+
+## Developer surface
+
+- There is no Postcron developer program, API reference, OpenAPI/AsyncAPI specification,
+  GraphQL endpoint, MCP server, A2A agent card, webhook catalog, CLI or client SDK.
+- The hosts https://postcron.com/api/ and https://api.postcron.com/api/v1/ are the private
+  backends of the Postcron web application. They answer, but they are token-gated
+  (`401 You need send a token`) and undocumented; they are not offered to third-party
+  developers and are not a supported integration surface.
+- No `/.well-known/` discovery document is served on any Postcron host.
+
+## Product
+
+- [Postcron](https://postcron.com): Social media scheduling and publishing dashboard
+- [Web application](https://postcron.com/app/): Sign in and schedule (Facebook, Google or X sign-in)
+- [Plans and pricing](https://postcron.com/en/pricing): Client-rendered pricing page
+- [Help Center](https://postcron.com/en/faqs): Product FAQs and support
+- [Blog](https://postcron.com/en/blog): Social media marketing blog (EN/ES/PT)
+
+## Legal
+
+- [Terms, Conditions and Privacy Policy](https://postcron.com/en/terms_conditions_privacy_policy)
+
+## API Evangelist profile
+
+- [APIs.json](https://raw.githubusercontent.com/api-evangelist/postcron/refs/heads/main/apis.yml): Machine-readable profile
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/postcron/refs/heads/main/security/postcron-domain-security.yml): TLS/HSTS/SPF/DMARC
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/postcron/refs/heads/main/well-known/postcron-well-known.yml): 16 paths probed, 0 documents served
